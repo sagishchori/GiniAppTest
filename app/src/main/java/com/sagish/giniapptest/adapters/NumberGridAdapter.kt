@@ -43,15 +43,15 @@ class NumberGridAdapter(private var array: ArrayList<Number>?, context: Context)
             binding.number = number?.number.toString()
 
             if (number?.hasCouple!!) {
-                binding.intContainer.layoutParams.height = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                binding.intTextView.layoutParams.height = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                     150F,
                     dm).toInt()
-                binding.intContainer.setBackgroundColor(binding.intContainer.resources.getColor(R.color.red))
+                binding.intTextView.setBackgroundColor(binding.intContainer.resources.getColor(R.color.red))
             } else {
-                binding.intContainer.layoutParams.height = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                binding.intTextView.layoutParams.height = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                     100F,
                     dm).toInt()
-                binding.intContainer.setBackgroundColor(binding.intContainer.resources.getColor(R.color.orange))
+                binding.intTextView.setBackgroundColor(binding.intContainer.resources.getColor(R.color.orange))
             }
         }
     }

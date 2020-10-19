@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.sagish.giniapptest.R
 import com.sagish.giniapptest.adapters.NumberGridAdapter
@@ -56,7 +57,7 @@ class FirstFragment : Fragment() {
             }
         })
 
-        val layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        val layoutManager = GridLayoutManager(requireContext(), 3, GridLayoutManager.VERTICAL, false)
         firstBinding.recyclerView.layoutManager = layoutManager
 
         gridAdapter = NumberGridAdapter(arrayListOf(), requireContext())
